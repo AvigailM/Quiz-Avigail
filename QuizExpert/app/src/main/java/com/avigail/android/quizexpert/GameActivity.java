@@ -4,21 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.util.JsonReader;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import com.avigail.android.quizexpert.model.QuizQuestion;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -63,6 +58,9 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
     private TextView numOfQuestionTextView;
 
     private TextView scoreText;
+
+    // if the Options for the Answer are 2 instead of 4
+    private static boolean setTwoAnswerOptions = false;
 
 
     private int numOfQuestion = 0;
@@ -200,14 +198,21 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
         questionTextView.setText(quizQuestionsList.get(numOfQuestion).getmQuestion());
 
         if(!quizQuestionsList.get(numOfQuestion).getmType().equals("boolean")){
-            buttonAnswer4.setVisibility(View.VISIBLE);
-            buttonAnswer3.setVisibility(View.VISIBLE);
+
+            if(setTwoAnswerOptions){
+                buttonAnswer4.setVisibility(View.VISIBLE);
+                buttonAnswer3.setVisibility(View.VISIBLE);
+                setTwoAnswerOptions = false;
+            }
+
             buttonAnswer3.setText(answersList.get(2));
             buttonAnswer4.setText(answersList.get(3));
 
         }else{
-            buttonAnswer4.setVisibility(View.GONE);
-            buttonAnswer3.setVisibility(View.GONE);
+            // if the you have Two Answer Options instead of 4:
+            setTwoAnswerOptions = true;
+            buttonAnswer4.setVisibility(View.INVISIBLE);
+            buttonAnswer3.setVisibility(View.INVISIBLE);
 
         }
 

@@ -1,4 +1,4 @@
-package com.avigail.android.quizexpert;
+package com.avigail.android.quizexpert.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
