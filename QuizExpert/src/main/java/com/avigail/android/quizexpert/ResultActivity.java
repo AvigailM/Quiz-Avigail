@@ -1,7 +1,9 @@
 package com.avigail.android.quizexpert;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -39,9 +41,11 @@ public class ResultActivity extends AppCompatActivity {
         if( scoreNum > SCORE_TO_WIN ){
             textOnScreen = "You Are The Best!!!\n" ;
             imageLostOrWin.setImageResource(R.drawable.win_face);
+            score.setTextColor(getResources().getColor(R.color.colorGreenWin));
         }
         else{
             textOnScreen = "Try Again!\n Maybe Next Time";
+            score.setTextColor(Color.RED);
         }
 
         textOfResult.setText(textOnScreen);
