@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity
     private static String urlBuild = "";
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

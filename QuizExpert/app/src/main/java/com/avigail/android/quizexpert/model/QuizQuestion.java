@@ -27,12 +27,12 @@ public class QuizQuestion {
 
 
     // constractor :
-    public QuizQuestion(String mCategory, String mType, String mDifficulty, String mQuestion, String mCorrectAnswer, ArrayList<String> incorrectAnswers) {
-        this.mCategory = mCategory;
-        this.mType = mType;
-        this.mDifficulty = mDifficulty;
-        this.mQuestion = mQuestion;
-        this.mCorrectAnswer = mCorrectAnswer;
+    public QuizQuestion(String category, String type, String difficulty, String question, String correctAnswer, ArrayList<String> incorrectAnswers) {
+        this.mCategory = category;
+        this.mType = type;
+        this.mDifficulty = difficulty;
+        this.mQuestion = question;
+        this.mCorrectAnswer = correctAnswer;
         this.incorrectAnswers = incorrectAnswers;
     }
 
@@ -46,20 +46,19 @@ public class QuizQuestion {
     }
 
 
-
-    public String getmType() {
+    public String getType() {
         return mType;
     }
 
-    public String getmDifficulty() {
+    public String getDifficulty() {
         return mDifficulty;
     }
 
-    public String getmQuestion() {
+    public String getQuestion() {
         return mQuestion;
     }
 
-    public String getmCorrect_answer() {
+    public String getCorrect_answer() {
         return mCorrectAnswer;
     }
 

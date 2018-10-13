@@ -49,6 +49,8 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
 
     private static final String TAG_INCORRECT_ANSWERS = "incorrect_answers";
 
+    private static final String TAG_RESPONSE = "response_code";
+
     String url = "https://opentdb.com/api.php?amount=10";
 
     private List<QuizQuestion> quizQuestionsList;
@@ -126,7 +128,7 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
                 try {
                     //getting the whole json object from the response
                     JSONObject obj = new JSONObject(response);
-                    int success = obj.getInt("response_code");
+                    int success = obj.getInt(TAG_RESPONSE);
 
                     if (success == 0) {
 
@@ -191,13 +193,13 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
 
         answersList = quizQuestionsList.get(numOfQuestion).getIncorrectAnswers();
 
-        answersList.add(quizQuestionsList.get(numOfQuestion).getmCorrect_answer());
+        answersList.add(quizQuestionsList.get(numOfQuestion).getCorrect_answer());
 
         Collections.shuffle(answersList, new Random());
 
-        questionTextView.setText(quizQuestionsList.get(numOfQuestion).getmQuestion());
+        questionTextView.setText(quizQuestionsList.get(numOfQuestion).getQuestion());
 
-        if(!quizQuestionsList.get(numOfQuestion).getmType().equals("boolean")){
+        if(!quizQuestionsList.get(numOfQuestion).getType().equals("boolean")){
 
             if(setTwoAnswerOptions){
                 buttonAnswer4.setVisibility(View.VISIBLE);
@@ -267,7 +269,7 @@ public class GameActivity extends AppCompatActivity  implements View.OnClickList
         String clickedAnswer = buttonClicked.getText().toString();
         String textToPrintOnScreen = "";
 
-        String correctAnswer = quizQuestionsList.get(numOfQuestion).getmCorrect_answer().toString();
+        String correctAnswer = quizQuestionsList.get(numOfQuestion).getCorrect_answer().toString();
 
         if ( numOfQuestion < quizQuestionsList.size() && clickedAnswer.equals(correctAnswer)){
 
