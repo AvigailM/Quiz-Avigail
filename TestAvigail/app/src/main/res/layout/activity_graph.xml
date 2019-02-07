@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitleGraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/balckLine"
+        android:layout_width="341dp"
+        android:layout_height="2dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/textTitleGraph"
+        android:background="#d5d2d2" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="341dp"
+        android:layout_height="244dp"
+        android:layout_below="@+id/balckLine"
+        android:icon="@drawable/screen"
+        android:fontFamily="@font/opensans_semibold">
+    </com.github.mikephil.charting.charts.LineChart>
+
+
+</RelativeLayout>
+
