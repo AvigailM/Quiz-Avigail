@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--category-->
+
+    <string-array name="settings_category_labels">
+        <item>@string/settings_order_by_category_sport_label</item>
+        <item>@string/settings_order_by_category_general_knowledge_label</item>
+        <item>@string/settings_order_by_category_music_label</item>
+        <item>@string/settings_order_by_category_celebrities_label</item>
+        <item>@string/settings_order_by_category_books_label</item>
+    </string-array>
+
+    <string-array name="settings_category_values">
+        <item>@string/settings_order_by_category_sport_value</item>
+        <item>@string/settings_order_by_category_general_knowledge_value</item>
+        <item>@string/settings_order_by_category_music_value</item>
+        <item>@string/settings_order_by_category_celebrities_value</item>
+        <item>@string/settings_order_by_category_books_value</item>
+    </string-array>
+
+
+    <!--difficulty-->
+
+    <string-array name="settings_difficulty_labels">
+        <item>@string/settings_order_by_difficulty_any_label</item>
+        <item>@string/settings_order_by_difficulty_easy_label</item>
+        <item>@string/settings_order_by_difficulty_medium_label</item>
+        <item>@string/settings_order_by_difficulty_hard_label</item>
+    </string-array>
+
+
+    <string-array name="settings_difficulty_values">
+        <item>@string/settings_order_by_difficulty_any_value</item>
+        <item>@string/settings_order_by_difficulty_easy_value</item>
+        <item>@string/settings_order_by_difficulty_medium_value</item>
+        <item>@string/settings_order_by_difficulty_hard_value</item>
+    </string-array>
+
+
+
+</resources>

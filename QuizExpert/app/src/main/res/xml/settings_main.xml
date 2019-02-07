@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditTextPreference
+        android:inputType="number"
+        android:defaultValue="@string/settings_order_by_num_of_questions_default"
+        android:key="@string/settings_order_by_num_of_questions_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/settings_order_by_num_of_questions_label" />
+
+    <ListPreference
+        android:defaultValue="@string/settings_order_by_category_default"
+        android:entries="@array/settings_category_labels"
+        android:entryValues="@array/settings_category_values"
+        android:key="@string/settings_order_by_category_key"
+        android:title="@string/settings_order_by_category_label" />
+
+    <ListPreference
+        android:defaultValue="@string/settings_order_by_difficulty_default"
+        android:entries="@array/settings_difficulty_labels"
+        android:entryValues="@array/settings_difficulty_values"
+        android:key="@string/settings_order_by_difficulty_key"
+        android:title="@string/settings_order_by_difficulty_label" />
+
+
+</PreferenceScreen>
